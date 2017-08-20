@@ -6,6 +6,40 @@ The time in seconds was measured until they fell off from exhaustion:
 
 Compute the mode, median, mean, upper and lower quartiles, range andinterquartile range
 
+Had to create a function for MODE See below for the actual formula.  
+
+> MODE <- function(dataframe){
++     DF <- as.data.frame(dataframe)
++
++     MODE2 <- function(x){      
++         if (is.numeric(x) == FALSE){
++             df <- as.data.frame(table(x))  
++             df <- df[order(df$Freq), ]         
++             m <- max(df$Freq)        
++             MODE1 <- as.vector(as.character(subset(df, Freq == m)[, 1]))
++
++             if (sum(df$Freq)/length(df$Freq)==1){
++                 warning("No Mode: Frequency of all values is 1", call. = FALSE)
++             }else{+                 return(MODE1)
++             }
++
++         }else{ 
++             df <- as.data.frame(table(x))  
++             df <- df[order(df$Freq), ]         
++             m <- max(df$Freq)        
++             MODE1 <- as.vector(as.numeric(as.character(subset(df, Freq == m)[, 1])))
++
++             if (sum(df$Freq)/length(df$Freq)==1){
++                 warning("No Mode: Frequency of all values is 1", call. = FALSE)
++             }else{
++                 return(MODE1)
++             }
++         }
++     }
++
++     return(as.vector(lapply(DF, MODE2)))
++ }
+
 Mode> MODE(x)$dataframe[1] 18 22 23 34 36 46
 Range:
 > range(smokers)[1] 16 57
