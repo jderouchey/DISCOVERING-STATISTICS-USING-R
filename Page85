@@ -1,0 +1,23 @@
+Page 85 of DISCOVERING STATISTICS USING R
+SELF-TEST
+Twenty-one heavy smokers were put on a treadmill at thefastest setting.
+The time in seconds was measured until they fell off from exhaustion:
+18, 16, 18, 24, 23, 22, 22, 23, 26, 29, 32,34, 34, 36, 36, 43, 42, 49, 46, 46, 57
+
+Compute the mode, median, mean, upper and lower quartiles, range andinterquartile range
+
+Mode> MODE(x)$dataframe[1] 18 22 23 34 36 46
+Range:
+> range(smokers)[1] 16 57
+
+Median:
+> median(smokers)[1] 32> 
+
+Mean:
+> mean(smokers)[1] 32.19048> 
+
+interquartile range:
+> IQR(smokers)[1] 19
+
+Lower Quartiles = 16,Upper Quartiles = 57:
+> quantile(smokers)  0%  25%  50%  75% 100%   16   23   32   42   57 
