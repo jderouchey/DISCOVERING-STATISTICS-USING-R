@@ -45,10 +45,10 @@ Range:
 > range(smokers)[1] 16 57
 
 Median:
-> median(smokers)[1] 32> 
+> median(smokers)[1] 32 
 
 Mean:
-> mean(smokers)[1] 32.19048> 
+> mean(smokers)[1] 32.19048
 
 interquartile range:
 > IQR(smokers)[1] 19
