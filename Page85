@@ -54,4 +54,5 @@ interquartile range:
 > IQR(smokers)[1] 19
 
 Lower Quartiles = 16,Upper Quartiles = 57:
-> quantile(smokers)  0%  25%  50%  75% 100%   16   23   32   42   57 
+> quantile(smokers)  0%  25%  50%  75% 100%
+                     16   23   32   42   57 
