@@ -20,7 +20,8 @@ Had to create a function for MODE See below for the actual formula.
 +
 +             if (sum(df$Freq)/length(df$Freq)==1){
 +                 warning("No Mode: Frequency of all values is 1", call. = FALSE)
-+             }else{+                 return(MODE1)
++             }else{
++                 return(MODE1)
 +             }
 +
 +         }else{ 
